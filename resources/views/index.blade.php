@@ -5,14 +5,20 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <title>home</title>
 </head>
 <body>
-<p>home</p>
+<a href="/">
+    <button>home</button>
+</a>
+<a href="/livro/novo">
+    <button>novo</button>
+</a>
 <div class="container">
     @if (isset($livros))
         @foreach ($livros as $livro)
-            <div>
+            <div class="card">
                 <div>
                     <label for="titulo">titulo</label>
                     <input type="text" name="titulo" value="{{$livro->titulo}}"/>
@@ -46,7 +52,6 @@
                         <button>exluir</button>
                     </a>
                 </div>
-
             </div>
         @endforeach
     @else

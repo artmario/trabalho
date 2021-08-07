@@ -9,6 +9,9 @@
 </head>
 
 <body>
+<a href="/">
+    <button>home</button>
+</a>
     <form action="{{route('registra_livro')}}" method="post">
         @csrf
         <div>

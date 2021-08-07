@@ -27,7 +27,7 @@ class LivroController extends Controller
             'editora' => $requisao->editora,
             'ano_lancamento' => $requisao->ano_lancamento
         ]);
-        return "livro criado";
+        return view("livros.operacao",['mensagem'=>"livro criado com sucesso"]);
     }
     public function show($id)
     {
@@ -50,7 +50,7 @@ class LivroController extends Controller
             'editora' => $requisao->editora,
             'ano_lancamento' => $requisao->ano_lancamento
         ]);
-        return "prod atualizado";
+        return view("livros.operacao",['mensagem'=>"livro atualizado com sucesso"]);
     }
     public function delete($id)
     {
