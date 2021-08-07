@@ -7,6 +7,11 @@ use App\Models\Livros;
 
 class LivroController extends Controller
 {
+    public function home()
+    {
+        $livros=Livros::all();
+        return view('index')->with('livros',$livros);
+    }
     public function create()
     {
         return view('livros.create');

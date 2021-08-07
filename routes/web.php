@@ -14,9 +14,7 @@ use App\Http\Controllers\LivroController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[LivroController::class,'home']);
 
 Route::get('/livro/novo',[LivroController::class,'create']);
 Route::post('/livro/novo',[LivroController::class,'store'])->name('registra_livro');
