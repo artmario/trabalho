@@ -20,6 +20,6 @@ Route::get('/livro/novo',[LivroController::class,'create']);
 Route::post('/livro/novo',[LivroController::class,'store'])->name('registra_livro');
 Route::get('/livro/ver/{id}',[LivroController::class,'show']);
 Route::get('/livro/editar/{id}',[LivroController::class,'edit']);
-Route::post('/livro/editar/{id}',[LivroController::class,'update'])->name('alterar_livro');
+Route::put('/livro/editar/{id}',[LivroController::class,'update'])->name('alterar_livro');
 Route::get('/livro/excluir/{id}',[LivroController::class,'delete']);
-Route::post('/livro/excluir/{id}',[LivroController::class,'exluir'])->name('deletar_livro');
+Route::delete('/livro/excluir/{id}',[LivroController::class,'exluir'])->name('deletar_livro');
